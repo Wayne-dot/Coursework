@@ -1,0 +1,11 @@
+10
+James First 11790 25 3.4
+Mary Second 11707 26 3.75
+Roger Third 11704 24 3.5
+April Fourth 11702 22 3.6
+Mark Fifth 11790 28 3.75
+Jamie Sixth 11790 27 3.77
+Brian Seventh 11707 23 3.9
+Maggie Eighth 11705 25 3.9
+Robert Ninth 11797 28 3.8
+Marsha Tenth 11703 27 3.75

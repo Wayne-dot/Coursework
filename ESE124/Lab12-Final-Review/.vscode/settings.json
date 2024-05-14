@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "**/*.exe": true
+    },
+    "files.associations": {
+        "*.ejs": "html",
+        "xstring": "c"
+    }
+}

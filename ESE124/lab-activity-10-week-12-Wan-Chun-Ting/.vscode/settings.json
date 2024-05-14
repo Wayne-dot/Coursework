@@ -1,0 +1,20 @@
+{
+    "files.exclude": {
+        "**/*.exe": true
+    },
+    "files.associations": {
+        "*.ejs": "html",
+        "stdio.h": "c",
+        "array": "c",
+        "deque": "c",
+        "initializer_list": "c",
+        "queue": "c",
+        "ranges": "c",
+        "span": "c",
+        "utility": "c",
+        "vector": "c",
+        "xstring": "c",
+        "xutility": "c",
+        "queue.h": "c"
+    }
+}

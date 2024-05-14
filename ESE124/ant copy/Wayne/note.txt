@@ -1,0 +1,11 @@
+//make your own sequence of action, so the ant can achieve highest score, given any number of step
+
+//Make sure for the input.txt the last line is a empty line
+
+For the modidy maze
+-1 = *
+-2 = space
+-3 = pheromone
+
+itch ==> itch = 1
+no itch ==> itch = 0

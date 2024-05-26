@@ -1,2 +1,2 @@
 # Coursework
-University coursework
+Relevant coursework

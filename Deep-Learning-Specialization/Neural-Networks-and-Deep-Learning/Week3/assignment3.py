@@ -7,7 +7,7 @@ from testCases import *
 import sklearn
 import sklearn.datasets
 import sklearn.linear_model
-from planar_utils import plot_decision_boundary,sigmoid,load_planar_dataset,load_extra_datasets
+from Week3.planar_utils import plot_decision_boundary,sigmoid,load_planar_dataset,load_extra_datasets
 
 # set a seed so that the results are consistent
 np.random.seed(1)

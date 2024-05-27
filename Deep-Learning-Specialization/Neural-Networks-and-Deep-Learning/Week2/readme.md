@@ -1,6 +1,6 @@
 # Image Classifier for Cat Identification
 
-In this assignment, I developed a simple image classifier to identify whether an image contains a cat using logistic regression.
+In this assignment, I developed a simple image classifier to identify whether an image contains a cat with a neural network using logistic regression
 
 ## Examples
 

@@ -9,6 +9,7 @@ In this assignment, I developed a simple image classifier to identify whether an
         <p>For y = 1, you predicted that it is a "cat" picture.</p>
         <img src="images/output1.png" alt="Cat Image 1">
     </div>
+    <br>
     <div style="flex: 1; text-align:center;">
         <p>For y = 1, you predicted that it is a "non-cat" picture.</p>
         <img src="images/output2.png" alt="Cat Image 2">

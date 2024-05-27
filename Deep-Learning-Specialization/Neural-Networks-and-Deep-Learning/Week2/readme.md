@@ -2,6 +2,10 @@
 
 In this assignment, I developed a simple image classifier to identify whether an image contains a cat with a neural network using logistic regression.
 
+## Model Struture
+
+<img src="images/LogReg_kiank.png" style="width:650px;height:400px;">
+
 ## Examples
 
 <div style="display:flex; justify-content: space-between;">

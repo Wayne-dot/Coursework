@@ -1,4 +1,4 @@
-// Wayne Ting SBU ID: 115334926
+
 
 #include <stdio.h>
 #include <stdlib.h>

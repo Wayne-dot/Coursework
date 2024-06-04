@@ -1,13 +1,14 @@
 ## Week 3 assignment
 
 This week I learn how to make a neural net with 1 hidden layer
+
 Here is the neural net architecture
 
 <img src="images/classification_kiank.png" style="width:600px;height:300px;">
 
 And here is the input data
 
-<img src="images/input_data.png">
+<img src="images/Input_data.png">
 
 If using logistic regression, here is the result, which is not ideal
 

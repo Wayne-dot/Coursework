@@ -1,7 +1,7 @@
 # Coursework
 
 - ESE 124 - C programming (bitwise operations, data struture include stack and queue, table-based FSM implementation)
-- Deep-Learning-Specialization - Coursera deep learning courses
+- Coursera - Deep-Learning-Specialization by Andrew Ng
   1. Neural Networks and Deep Learning
   2. Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization
   3. Structuring Machine Learning Projects

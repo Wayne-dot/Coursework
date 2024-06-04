@@ -7,11 +7,11 @@ Here is the neural net architecture
 
 And here is the input data
 
-![alt text](/images/input_data.png)
+<img src="images/input_data.png">
 
 If using logistic regression, here is the result, which is not ideal
 
-![alt text](/images/log_class.png)
+<img src="images/log_class.png">
 
 Here is the result of different number of hidden layer, here is the accuracy
 
@@ -23,5 +23,5 @@ Here is the result of different number of hidden layer, here is the accuracy
 - Accuracy for 10 hidden units: 90.25 %
 - Accuracy for 20 hidden units: 90.5 %
 
-![alt text](/images/output.png)
+<img src="images/output.png">
 

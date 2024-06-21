@@ -1,7 +1,5 @@
 # Coursework
 
-# Coursework
-
 - [x] **ESE 124 - C Programming** (Bitwise operations, Data structures including stack and queue, Table-based FSM implementation)
 
 - [ ] **Coursera - Deep Learning Specialization by Andrew Ng**

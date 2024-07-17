@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: star-segmentor
+    runtime: python
+    buildCommand: |
+      wget https://github.com/Puneet-Bajaj-IITM/image-segmentation/releases/download/v1.0.0/results.zip
+      unzip results.zip
+      pip install -r requirements.txt
+    startCommand: python app.py
+    
+  

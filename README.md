@@ -8,3 +8,5 @@
   3. [x] Structuring Machine Learning Projects
   4. [x] Convolutional Neural Networks
   5. [ ] Sequence Models
+
+- [ ] **CS 61A: Structure and Interpretation of Computer Programs**

@@ -1,0 +1,8 @@
+﻿  Practice01.cpp
+C:\Users\wayne\Desktop\Github\Coursework\ESE224\Practice\Practice01\Practice01.cpp(58,28): warning C4584: 'MyOtherClass': base-class 'Vechicle' is already a base-class of 'Car'
+      C:\Users\wayne\Desktop\Github\Coursework\ESE224\Practice\Practice01\Practice01.cpp(40,7):
+      see declaration of 'Vechicle'
+      C:\Users\wayne\Desktop\Github\Coursework\ESE224\Practice\Practice01\Practice01.cpp(48,7):
+      see declaration of 'Car'
+  
+  Practice01.vcxproj -> C:\Users\wayne\Desktop\Github\Coursework\ESE224\Practice\Practice01\x64\Debug\Practice01.exe

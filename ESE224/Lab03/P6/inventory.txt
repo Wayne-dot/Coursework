@@ -1,0 +1,5 @@
+Apples 1.5 50
+Bananas 0.75 100
+Oranges 2 80
+Milk 3.5 30
+Bread 2.25 40

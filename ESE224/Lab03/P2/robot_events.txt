@@ -1,0 +1,6 @@
+5
+Energy 10.5
+Power -5.0
+Speed 12.3
+Energy -3.2
+Power 8.0

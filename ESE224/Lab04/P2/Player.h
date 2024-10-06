@@ -9,7 +9,8 @@ class Player{
         int wins;
     public:
         Player();
-        void makeChoice();
+        Player(string n_ame);
+        int makeChoice();
         void incrementWins();
         int getWins();
         string getName();

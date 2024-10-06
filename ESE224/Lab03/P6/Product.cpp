@@ -2,17 +2,6 @@
 #include "Product.h"
 using namespace std;
 
-// class Product{
-//     private:
-//         string name;
-//         float price;
-//         int quantity;
-//     public:
-//         void displayProduct() const;
-//         void restock(int amount);
-//         bool sell(int amount);
-// };
-
 void Product::displayProduct() const{
     cout << "Product: " << name << ", Price: $" << price << ", Quantity: " << quantity << endl;
 }

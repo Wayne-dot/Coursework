@@ -1,5 +1,4 @@
 
-#include <cmath>
 #include <iostream>
 #include <string>
 
@@ -10,8 +9,7 @@ string expand_palindrome(string str, int start, int finish){
         start -=1;
         finish += 1;
     }
-    // helleh
-    return str.substr(start + 1, finish - 1);
+    return str.substr(start + 1, finish - start - 1);
 }
 
 string longestPalindrome(string str){
@@ -20,11 +18,12 @@ string longestPalindrome(string str){
         return str;
     }
     
+    // set the longest palindrome substring to the first character
     string longest = str.substr(0, 1);
     string even, odd;
 
     for(int i = 0 ; i < str.length() ; i++){
-        // odd palindrome, one center, check for each index
+        // odd palindrome, one center, check for each index, (i), (i+1), (i+2)
         even = expand_palindrome(str, i, i);
         if(even.length() > longest.length()){
             longest = even;
@@ -37,7 +36,7 @@ string longestPalindrome(string str){
         }
     }
 
-    return longest
+    return longest;
 
 }
 

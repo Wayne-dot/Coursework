@@ -1,1 +1,1 @@
-You guess the number in 9 attemps.
+You guess the number in 6 attemps.

@@ -1,5 +1,4 @@
 
-#include <_stdio.h>
 #include <fstream>
 #include <iostream>
 #include <sstream>

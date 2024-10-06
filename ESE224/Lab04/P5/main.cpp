@@ -1,4 +1,4 @@
-
+#include <ctime>
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
@@ -9,7 +9,7 @@ int main(){
 
     srand(time(0));
     int num = (rand() % 100) + 1;
-    int attemps, guess;
+    int attemps = 0, guess;
     bool guess_right = false;
 
     ofstream OutputFile("guess_results.txt");

@@ -21,7 +21,7 @@ void incremnt(int &num){
 int main(int argc, const char * argv[]) {
     
     ifstream inputFile("input.txt");
-    ofstream outputFile("output_increment.txt");
+    ofstream outputFile("output_fake_increment.txt");
     
     if(!inputFile || !outputFile){
         cerr << "Error: Unable to open input file." << endl;
@@ -32,7 +32,7 @@ int main(int argc, const char * argv[]) {
     int number;
     while(inputFile >> number){
         // or fakeIncrement
-        incremnt(number);
+        fakeIncrement(number);
         cout << number << endl;
         outputFile << number << endl;
     }

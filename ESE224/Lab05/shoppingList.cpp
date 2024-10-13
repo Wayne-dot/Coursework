@@ -1,16 +1,18 @@
 
 #include "shoppingList.h"
-#include <istream>
+#include <fstream>
+#include <iostream>
+
+using namespace std;
 
 ShoppingList::ShoppingList(){
 
 }
 
-bool ShoppingList::fileOpen(istream& in){
-    if(!in){
-        return false;
+bool ShoppingList::fileOpen(fstream& in){
+    if(in.open()){
+
     }
-    return true;
 }
 
 void ShoppingList::printAll(){

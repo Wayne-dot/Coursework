@@ -14,6 +14,11 @@ class ShoppingList{
         string name;
     public:
         ShoppingList();
-        bool (istream& in);
+        bool fileOpen(fstream& in);
+        bool itemExists(fstream& in);
+        void addItem(fstream& in);
+        void printMostExpansiveItem();
         void printAll();
+        void printTranspose();
+        void priceSort();
 };

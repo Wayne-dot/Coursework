@@ -1,7 +1,6 @@
 
 
 #include <fstream>
-#include <istream>
 #include <string>
 
 using namespace std;
@@ -12,11 +11,13 @@ class ShoppingList{
         fstream myFile;
         string most_expansive_item;
         string name;
+        double price;
+        double max_price;
     public:
         ShoppingList();
-        bool fileOpen(fstream& in);
-        bool itemExists(fstream& in);
-        void addItem(fstream& in);
+        bool fileOpen(const string& filename);
+        double itemExists(const string& check_item);
+        void addItem(const string& add_item, double add_price);
         void printMostExpansiveItem();
         void printAll();
         void printTranspose();

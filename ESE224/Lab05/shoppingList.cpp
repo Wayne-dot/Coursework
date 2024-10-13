@@ -28,10 +28,16 @@ bool ShoppingList::fileOpen(const string& filename){
 }
 
 void ShoppingList::addItem(const string& add_item, double add_price){
-    
+    myFile.close();
+    myFile.open(file_name);
+    myFile.seekp(0, ios::end);
+    myFile << endl << add_item << " " << add_price << endl;
+    myFile.close();
 }
 
 double ShoppingList::itemExists(const string& check_item){
+    myFile.close();
+    myFile.open(file_name);
     string line;
     vector<string> items;
     vector<double> prices;
@@ -45,6 +51,8 @@ double ShoppingList::itemExists(const string& check_item){
         items.push_back(name);
         prices.push_back(price);
     }
+
+    myFile.close();
 
     for (int i = 0; i < items.size(); ++i) {
         if (items[i] == check_item) {
@@ -68,6 +76,8 @@ string double_to_string(double num){
 }
 
 void ShoppingList::printTranspose(){
+    myFile.close();
+    myFile.open(file_name);
     string line;
     vector<string> items;
     vector<double> prices;
@@ -89,11 +99,44 @@ void ShoppingList::printTranspose(){
     for(int i = 0 ; i < prices.size() ; i++){
         cout << left << setw(15) << ("$" + double_to_string(prices[i]));
     }
+
+    myFile.close();
     
 
 }
 
+void ShoppingList::printMostExpansiveItem(){
+    myFile.close();
+    myFile.open(file_name);
+    string line;
+    vector<string> items;
+    vector<double> prices;
+
+    while(getline(myFile, line)){
+        // cout << line << endl;
+        stringstream ss(line);
+        ss >> name;
+        ss >> price;
+
+        items.push_back(name);
+        prices.push_back(price);
+    }
+    myFile.close();
+
+    max_price = prices[0];
+    int index = 0;
+    for(int i = 0 ; i < prices.size() ; i++){
+        if(prices[i] > max_price){
+            max_price = prices[i];
+            index = i;
+        }
+    }
+    cout << "The most expansive item is " << items[index] << " and it cost $" << max_price << endl;
+}
+
 void ShoppingList::printAll(){
+    myFile.close();
+    myFile.open(file_name);
     string line;
     int i = 1;
 
@@ -109,4 +152,24 @@ void ShoppingList::printAll(){
 
         i++;
     }
+    myFile.close();
+}
+
+void ShoppingList::priceSort(){
+    myFile.close();
+    myFile.open(file_name);
+    string line;
+
+
+    while(getline(myFile, line)){
+        // cout << line << endl;
+        stringstream ss(line);
+        ss >> name;
+        ss >> price;
+    }
+    myFile.close();
+
+    
+
+
 }

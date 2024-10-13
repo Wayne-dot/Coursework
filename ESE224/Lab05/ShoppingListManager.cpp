@@ -61,12 +61,20 @@ int main(){
                 cin >> item >> price;
                 shoppinglist.addItem(item, price);
             }
+            else if (choice == 'e') {
+                shoppinglist.printMostExpansiveItem();
+            }
+            else if (choice == 's') {
+                shoppinglist.priceSort();
+            }
 
 
             cout << endl;
 
         }
     }
+
+
 
     
 

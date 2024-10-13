@@ -1,6 +1,7 @@
 
 
 #include <fstream>
+#include <istream>
 #include <string>
 
 using namespace std;
@@ -13,5 +14,6 @@ class ShoppingList{
         string name;
     public:
         ShoppingList();
-        
+        bool (istream& in);
+        void printAll();
 };

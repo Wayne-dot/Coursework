@@ -3,12 +3,10 @@
 #include <fstream>
 #include <ios>
 #include <iostream>
-#include <regex>
 #include <sstream>
 #include <string>
 #include <iomanip>
 #include <vector>
-#include <set>
 
 using namespace std;
 
@@ -159,6 +157,8 @@ void ShoppingList::priceSort(){
     myFile.close();
     myFile.open(file_name);
     string line;
+    vector<string> items;
+    vector<double> prices;
 
 
     while(getline(myFile, line)){
@@ -166,10 +166,38 @@ void ShoppingList::priceSort(){
         stringstream ss(line);
         ss >> name;
         ss >> price;
+
+        items.push_back(name);
+        prices.push_back(price);
     }
     myFile.close();
 
-    
+    // selection sorting algorthim
+    double max, temp;
+    string temp_string;
 
+    for(int i = 0 ; i < prices.size() ; i++){
+        max = i;
+        for(int j = i+1 ; j < prices.size() ; j++){
+            if(prices[j] > prices[max]){
+                // set current maximum
+                max = j;
+            }
+        }
+        // swap
+        temp = prices[i];
+        prices[i] = prices[max];
+        prices[max] = temp;
+
+        // also swap the items
+        temp_string = items[i];
+        items[i] = items[max];
+        items[max] = temp_string;
+    }
+
+    for(int i = 0 ; i < prices.size() ; i++){
+        cout << left << setw(3) << (to_string(i+1) + ".") << 
+        left << setw(20) << items[i] << "$" << prices[i] << endl;
+    }
 
 }

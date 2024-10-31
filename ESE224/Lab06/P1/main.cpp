@@ -4,20 +4,35 @@
 
 using namespace std;
 
-int main(){
-    vector<int> nums = {2, 3, -2, 4};
+int max_sub_array(vector<int> &nums){
 
-    int temp, max_product = nums[0]* nums[1];
+    if(nums.empty()){
+        return 0;
+    }
+
+    //init for minimum result value
+    int result = nums[0] * nums[1];
+    int product;
 
     for(int i = 0 ; i < nums.size() ; i++){
-        for(int j = i ; j < nums.size() - 1 ; j++){
-            temp = nums[i] * nums[j+1];
-            if(temp > max_product){
-                max_product = temp;
-            }
+        product = 1;
+        for(int j = i ; j < nums.size() ; j++){
+            //swap of the product is larger than result
+            product *= nums[j];
+            if(product > result){
+                result = product;
+            } 
         }
     }
-    cout << max_product << endl;
+
+    return result;
+
+}
+
+int main(){
+    vector<int> array = {2, 3, -2, 4};
+
+    cout << "Maximum subarray product: " << max_sub_array(array)<< endl;
 
     return 0;
 }

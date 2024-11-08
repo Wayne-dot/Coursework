@@ -1,0 +1,4 @@
+Original Array: 15 22 8 30 42 17 3 29 12 25 
+Maximum: 42
+Minimum: 3
+Average: 20.3

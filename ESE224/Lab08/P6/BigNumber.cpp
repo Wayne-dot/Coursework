@@ -1,4 +1,5 @@
 #include "BigNumber.h"
+#include <stack>
 
 // Constructor: Create a linked list of digits from a string
 BigNumber::BigNumber(const std::string& number) : head(nullptr) {
@@ -22,14 +23,22 @@ void BigNumber::display() const {
         return;
     }
 
-    // Reverse the order for correct display
+    // Use a stack to reverse the order of digits for display
+    std::stack<int> digitStack;
     DigitNode* temp = head;
-    std::string number = "";
+
+    // Push all digits onto the stack
     while (temp != nullptr) {
-        number = std::to_string(temp->digit) + number; // Append each digit
+        digitStack.push(temp->digit);
         temp = temp->next;
     }
-    std::cout << number << "\n";
+
+    // Pop and print digits from the stack
+    while (!digitStack.empty()) {
+        std::cout << digitStack.top();
+        digitStack.pop();
+    }
+    std::cout << "\n";
 }
 
 // Add two BigNumber objects

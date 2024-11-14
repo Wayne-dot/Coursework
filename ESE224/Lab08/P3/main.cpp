@@ -3,26 +3,22 @@
 #include <string>
 
 int main() {
-    // Create GameInventory instances for int (weapon power) and double (potion healing)
+    // Create GameInventory instances for weapons and potions
     GameInventory<int> weaponInventory;
     GameInventory<double> potionInventory;
 
     int choice;
     do {
-        std::cout << "\nMenu:\n";
-        std::cout << "1. Add Weapon\n";
-        std::cout << "2. Add Potion\n";
-        std::cout << "3. Display Weapon Inventory\n";
-        std::cout << "4. Display Potion Inventory\n";
-        std::cout << "5. Remove Most Recent Weapon\n";
-        std::cout << "6. Remove Most Recent Potion\n";
-        std::cout << "7. Total Value of Weapon Inventory\n";
-        std::cout << "8. Total Value of Potion Inventory\n";
-        std::cout << "9. Average Weapon Power\n";
-        std::cout << "10. Average Potion Healing\n";
-        std::cout << "11. Clear All Weapons\n";
-        std::cout << "12. Clear All Potions\n";
-        std::cout << "13. Exit\n";
+        std::cout << "\nGame Inventory Management System\n";
+        std::cout << "=================================\n";
+        std::cout << "1. Add a weapon\n";
+        std::cout << "2. Add a potion\n";
+        std::cout << "3. Display inventory\n";
+        std::cout << "4. Retrieve most recent item\n";
+        std::cout << "5. Show total inventory value\n";
+        std::cout << "6. Show average item attribute\n";
+        std::cout << "7. Clear inventory\n";
+        std::cout << "8. Exit\n";
         std::cout << "Enter your choice: ";
         std::cin >> choice;
 
@@ -52,43 +48,48 @@ int main() {
             potionInventory.addItem(name, healing, value);
             break;
         }
-        case 3:
+        case 3: {
+            std::cout << "\nWeapons Inventory:\n";
             weaponInventory.displayInventory();
-            break;
-        case 4:
+            std::cout << "\nPotions Inventory:\n";
             potionInventory.displayInventory();
             break;
-        case 5:
-            weaponInventory.removeMostRecentItem();
+        }
+        case 4: {
+            std::cout << "\nMost Recent Weapon:\n";
+            weaponInventory.retrieveMostRecentItem();
+            std::cout << "\nMost Recent Potion:\n";
+            potionInventory.retrieveMostRecentItem();
             break;
-        case 6:
-            potionInventory.removeMostRecentItem();
+        }
+        case 5: {
+            std::cout << "\nWeapon Inventory:\n";
+            weaponInventory.totalInventoryValue();
+            std::cout << "\nPotion Inventory:\n";
+            potionInventory.totalInventoryValue();
             break;
-        case 7:
-            weaponInventory.totalValue();
+        }
+        case 6: {
+            std::cout << "\nWeapon Inventory:\n";
+            weaponInventory.averageItemAttribute();
+            std::cout << "\nPotion Inventory:\n";
+            potionInventory.averageItemAttribute();
             break;
-        case 8:
-            potionInventory.totalValue();
-            break;
-        case 9:
-            weaponInventory.averageAttribute();
-            break;
-        case 10:
-            potionInventory.averageAttribute();
-            break;
-        case 11:
+        }
+        case 7: {
+            std::cout << "\nClearing weapon inventory...\n";
             weaponInventory.clear();
-            break;
-        case 12:
+            std::cout << "Clearing potion inventory...\n";
             potionInventory.clear();
             break;
-        case 13:
-            std::cout << "Exiting program.\n";
+        }
+        case 8:
+            std::cout << "Exiting Game Inventory Management System.\n";
             break;
         default:
             std::cout << "Invalid choice. Please try again.\n";
         }
-    } while (choice != 13);
+    } while (choice != 8);
 
     return 0;
 }

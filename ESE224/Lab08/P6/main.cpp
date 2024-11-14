@@ -20,9 +20,9 @@ int main() {
 
     // Display the numbers
     std::cout << "First Number: ";
-    bigNum1.display();
-    std::cout << "Second Number: ";
     bigNum2.display();
+    std::cout << "Second Number: ";
+    bigNum1.display();
 
     // Perform addition
     BigNumber result = bigNum1.add(bigNum2);

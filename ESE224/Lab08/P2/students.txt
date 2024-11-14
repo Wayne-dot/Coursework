@@ -1,0 +1,4 @@
+3
+Alice 89.5
+Bob 78.0
+Charlie 92.0
